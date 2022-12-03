@@ -1,0 +1,61 @@
+body{
+    background-image: url(imagesBir/fon5.jpg);
+    background-size: cover;
+}
+.head{
+    display: flex;
+    margin-top: 30px;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+h2{
+    margin-left: 150px;
+    padding: 7.5px;
+    color: white;
+   
+}
+.head a{
+    text-decoration: none;
+}
+h2:hover{
+    color: blueviolet;
+    
+}
+h1{
+    text-align: center;
+    margin-top: -5px;
+
+}
+.welcome p{
+    color:white;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: -30px;
+}
+.ioga{
+    display: flex;
+
+}
+.text{
+    margin-left: 30px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: rgb(0, 3, 44);
+
+}
+.text1{
+    margin-left: 30px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin-top: 40px;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: rgb(0, 3, 44);
+    height: 200px;    
+}
