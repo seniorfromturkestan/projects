@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <style>
+      body{
+    padding: 40px;
+    background-image: url();
+    }
+    #exampleInputEmail1,#exampleInputPassword1{
+        width: 250px;
+    }
+    h2{
+        color: red;
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body> 
+    <h2>Welcome to our Social Set <a><img src="ChinaLogo.png" alt="alt" width="100px" height="32.5px"></a>Chat</h2>
+     <div style="display:flex">
+         <form id="main-form" onsubmit="return checkForm(this)" method="post">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Login</label>
+          <input type="email" name="login" class="form-control" placeholder="Придумайте логин" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" name="password" placeholder="Придумайте пароль"class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Reset password</label>
+            <input type="password" name="password1" placeholder="Повторите пароль"class="form-control" id="exampleInputPassword1">
+          </div>
+        <div style="display: flex;">
+            <div class="input-group-text">
+            <input class="form-check-input" id="sex"type="radio" value="Male" name="high" style="margin-right: 5px;"aria-label="Radio button for following text input"> Male
+            </div>
+
+            <div class="input-group-text" style="margin-left: 10px;">
+            <input class="form-check-input" id="sex" type="radio"  value="Female"name="high" style="margin-right: 5px;"aria-label="Radio button for following text input"> Female
+            </div>
+            
+        </div><br>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Я не робот</label>
+        </div>
+        
+        <button type="submit" class="btn btn-danger">Submit</button><br><br><div id="error" style="color:red"></div>
+
+      </form>
+      <video src="IMG_1152.MOV" width="300px" height="250px" muted="muted" autoplay="autoplay" ></video>
+     </div>
+
+
+  <script>
+    function checkForm(el){
+    // let name = document.getElementById('exampleInputEmail1').value;
+    let name = el.login.value;
+    let password = el.password.value;
+    let password1 = el.password1.value;
+    let sex = el.high.value;
+
+    console.log("Login: "+name, "Password: "+password, "ResetPass: "+password1, "Sex: "+sex);
+    let failed="";
+    if(name=="" || password==""||sex==""||password1==""){
+        // alert('Заполните все поля');
+        failed='Заполните все поля';
+    }else if(password!=password1){
+        alert("Пароли не совпадают");
+    }else if(password.split("&").length > 1){
+        alert("Некорректный пароль");
+    }else {
+        alert("Поздравляем, вы успешно зарегистровались");
+        window.location="https://code.mu/ru/javascript/manual/string/split/";
+    }
+  
+    if(failed != ""){
+        document.getElementById('error').innerHTML=failed;
+    }
+return false;
+}
+  </script>
+</body>
+</html>
